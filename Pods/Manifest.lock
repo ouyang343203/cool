@@ -1,0 +1,80 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - FDFullscreenPopGesture (1.1)
+  - JYUtils (0.3.3):
+    - JYUtils/JYCategory (= 0.3.3)
+    - JYUtils/JYUtilities (= 0.3.3)
+    - JYUtils/JYWidget (= 0.3.3)
+  - JYUtils/JYCategory (0.3.3)
+  - JYUtils/JYUtilities (0.3.3):
+    - MBProgressHUD (= 1.1.0)
+  - JYUtils/JYWidget (0.3.3):
+    - SDWebImage
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.4.1)
+  - MJRefresh (3.7.5)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
+  - SnapKit (4.2.0)
+  - WMPageController (2.5.2)
+  - WMZBanner (1.2.0):
+    - SDWebImage
+
+DEPENDENCIES:
+  - AFNetworking
+  - FDFullscreenPopGesture
+  - JYUtils
+  - Masonry
+  - MJExtension
+  - MJRefresh
+  - SDWebImage
+  - SnapKit
+  - WMPageController (= 2.5.2)
+  - WMZBanner
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - FDFullscreenPopGesture
+    - JYUtils
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - SDWebImage
+    - SnapKit
+    - WMPageController
+    - WMZBanner
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  JYUtils: fe90d9cff56aca3a121e649d71db711a1a4e112d
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
+  WMZBanner: 42d02896dc7a67a4d7a2ebe1ef5b7a79f8d2c540
+
+PODFILE CHECKSUM: 6129a452894402b5ab1f023e2785e87a0cea2a19
+
+COCOAPODS: 1.11.3
