@@ -25,7 +25,7 @@
 //#import "UIButton+Category.h"
 //#import "UILabel+Category.h"
 #import "UIBarButtonItem+Category.h"
-//#import "UIImage+Category.h"
+#import "UIImage+Orientation.h"
 //#import "UITextField+Category.h"
 //#import "UIViewController+Nav.h"
 //#import "UIView+Extension.h"

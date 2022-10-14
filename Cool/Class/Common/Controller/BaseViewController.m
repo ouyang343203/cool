@@ -19,8 +19,8 @@
     [super viewDidLoad];
     [self setupBaseViewController];
 }
+
 - (void)setupBaseViewController {
-    
     self.view.backgroundColor = kBackgroundColor;
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     if ([self.navigationController.viewControllers count] > 1) {

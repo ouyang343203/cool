@@ -66,4 +66,6 @@
  */
 +(CGFloat)radiansToDegrees:(CGFloat)radians;
 
++ (UIImage *)imageWithColor:(UIColor *)color;
+
 @end

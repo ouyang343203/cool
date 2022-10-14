@@ -27,6 +27,10 @@
 -(void)nextvcAction{
     [self.navigationController pushViewController:[[NextController alloc]init] animated:YES];
 }
+
+-(void)setbackgroundcolor{
+    
+}
 /*
 #pragma mark - Navigation
 
