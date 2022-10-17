@@ -13,5 +13,6 @@ target 'Cool' do
   pod 'IQKeyboardManager'
   pod 'WebViewJavascriptBridge'
   pod 'Moya'
+  pod 'LSSafeProtector'
 end
 

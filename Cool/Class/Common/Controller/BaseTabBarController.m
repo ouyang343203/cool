@@ -21,10 +21,20 @@
 }
 
 - (void)setupTabBarAppearance {
-    
+    if (@available(iOS 13.0, *)) {
+           UITabBarAppearance *tabBarAppearance = [[UITabBarAppearance alloc] init];
+           [tabBarAppearance configureWithOpaqueBackground];
+          // tabBarAppearance.backgroundImage = [UIImage imageNamed:@"MNYHUAYI_home"];
+           tabBarAppearance.shadowColor = [UIColor colorWithRed:249/255.0 green:251/255.0 blue:252/255.0 alpha:1.0];
+           self.tabBar.standardAppearance = tabBarAppearance;
+           if (@available(iOS 15.0, *)) {
+               self.tabBar.scrollEdgeAppearance = tabBarAppearance;
+           }
+        }
+
     self.tabBar.backgroundColor = kTabBarColor;
-    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:10],NSForegroundColorAttributeName : kTabBarTitleColor }forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:10],NSForegroundColorAttributeName : kGreenColor }forState:UIControlStateSelected];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:17],NSForegroundColorAttributeName : kTabBarTitleColor }forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:17],NSForegroundColorAttributeName : kGreenColor }forState:UIControlStateSelected];
 }
 
 @end

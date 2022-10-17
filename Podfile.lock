@@ -27,6 +27,16 @@ PODS:
     - MBProgressHUD (= 1.1.0)
   - JYUtils/JYWidget (0.3.3):
     - SDWebImage
+  - LSSafeProtector (2.1.4):
+    - LSSafeProtector/Core (= 2.1.4)
+    - LSSafeProtector/Foundation (= 2.1.4)
+    - LSSafeProtector/MRC (= 2.1.4)
+  - LSSafeProtector/Core (2.1.4)
+  - LSSafeProtector/Foundation (2.1.4):
+    - LSSafeProtector/Core
+  - LSSafeProtector/MRC (2.1.4):
+    - LSSafeProtector/Core
+    - LSSafeProtector/Foundation
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJExtension (3.4.1)
@@ -53,6 +63,7 @@ DEPENDENCIES:
   - FDFullscreenPopGesture
   - IQKeyboardManager
   - JYUtils (~> 0.3.3)
+  - LSSafeProtector
   - Masonry
   - MJExtension
   - MJRefresh
@@ -71,6 +82,7 @@ SPEC REPOS:
     - FLAnimatedImage
     - IQKeyboardManager
     - JYUtils
+    - LSSafeProtector
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -91,6 +103,7 @@ SPEC CHECKSUMS:
   FLAnimatedImage: bbf914596368867157cc71b38a8ec834b3eeb32b
   IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
   JYUtils: fe90d9cff56aca3a121e649d71db711a1a4e112d
+  LSSafeProtector: b2e6c263079d365967cc4d19817b38291b5fcbe6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
@@ -104,6 +117,6 @@ SPEC CHECKSUMS:
   WMZBanner: 42d02896dc7a67a4d7a2ebe1ef5b7a79f8d2c540
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
 
-PODFILE CHECKSUM: 2f9ef1ff64816da5113a210aeaa4312f781fad87
+PODFILE CHECKSUM: 96d35e0928f60644cdd27a62b7d61b1839c30b50
 
 COCOAPODS: 1.11.3

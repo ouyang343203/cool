@@ -30,6 +30,7 @@
 		3076732028F7E45D009980AF /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076731F28F7E45D009980AF /* HomeController.m */; };
 		3076732328F7E678009980AF /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732128F7E678009980AF /* MainTabBarController.m */; };
 		3076732628F7E7DB009980AF /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732428F7E7DB009980AF /* BaseNavigationViewController.m */; };
+		3096532028F96B3000AA08BD /* AppDelegate+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */; };
 		A51D421B6A13D61D0FBDAE4E /* libPods-Cool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E12138EF2E810ED02E457F1C /* libPods-Cool.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		3076732228F7E678009980AF /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		3076732428F7E7DB009980AF /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		3076732528F7E7DB009980AF /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
+		3096531E28F96B3000AA08BD /* AppDelegate+AvoidCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AvoidCrash.h"; sourceTree = "<group>"; };
+		3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AvoidCrash.m"; sourceTree = "<group>"; };
 		5E8E830D028CB67E5ADA131A /* Pods-Cool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool.debug.xcconfig"; path = "Target Support Files/Pods-Cool/Pods-Cool.debug.xcconfig"; sourceTree = "<group>"; };
 		6B2CB6948D1A8207F4A1B7DD /* Pods-Cool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool.release.xcconfig"; path = "Target Support Files/Pods-Cool/Pods-Cool.release.xcconfig"; sourceTree = "<group>"; };
 		E12138EF2E810ED02E457F1C /* libPods-Cool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +216,8 @@
 				307672BA28F6AB19009980AF /* UITextField+Category.m */,
 				307672BC28F6AB22009980AF /* UIButton+delay.h */,
 				307672BD28F6AB22009980AF /* UIButton+delay.m */,
+				3096531E28F96B3000AA08BD /* AppDelegate+AvoidCrash.h */,
+				3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				301C476128F7EB89007EB199 /* NextController.m in Sources */,
 				3076732628F7E7DB009980AF /* BaseNavigationViewController.m in Sources */,
 				3073697E28E0A1750006EAF3 /* BaseModel.m in Sources */,
+				3096532028F96B3000AA08BD /* AppDelegate+AvoidCrash.m in Sources */,
 				3073697D28E0A1750006EAF3 /* HttpManager.m in Sources */,
 				307672C928F6AB50009980AF /* BaseTableViewController.m in Sources */,
 				307672BB28F6AB19009980AF /* UITextField+Category.m in Sources */,
