@@ -31,6 +31,10 @@
 		3076732328F7E678009980AF /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732128F7E678009980AF /* MainTabBarController.m */; };
 		3076732628F7E7DB009980AF /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732428F7E7DB009980AF /* BaseNavigationViewController.m */; };
 		3096532028F96B3000AA08BD /* AppDelegate+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */; };
+		30EB724228FD37EF007B1C70 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EB724128FD37EE007B1C70 /* MoyaConfig.swift */; };
+		30EB724428FD37F5007B1C70 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EB724328FD37F4007B1C70 /* API.swift */; };
+		30EB724628FD3E01007B1C70 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EB724528FD3E01007B1C70 /* NetworkManager.swift */; };
+		30EB724A28FD5005007B1C70 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EB724928FD5005007B1C70 /* Tool.m */; };
 		A51D421B6A13D61D0FBDAE4E /* libPods-Cool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E12138EF2E810ED02E457F1C /* libPods-Cool.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +91,11 @@
 		3076732528F7E7DB009980AF /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
 		3096531E28F96B3000AA08BD /* AppDelegate+AvoidCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AvoidCrash.h"; sourceTree = "<group>"; };
 		3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AvoidCrash.m"; sourceTree = "<group>"; };
+		30EB724128FD37EE007B1C70 /* MoyaConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
+		30EB724328FD37F4007B1C70 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		30EB724528FD3E01007B1C70 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		30EB724828FD5005007B1C70 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
+		30EB724928FD5005007B1C70 /* Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		5E8E830D028CB67E5ADA131A /* Pods-Cool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool.debug.xcconfig"; path = "Target Support Files/Pods-Cool/Pods-Cool.debug.xcconfig"; sourceTree = "<group>"; };
 		6B2CB6948D1A8207F4A1B7DD /* Pods-Cool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool.release.xcconfig"; path = "Target Support Files/Pods-Cool/Pods-Cool.release.xcconfig"; sourceTree = "<group>"; };
 		E12138EF2E810ED02E457F1C /* libPods-Cool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +236,8 @@
 			children = (
 				3073697F28E0A43D0006EAF3 /* RSA.h */,
 				3073698028E0A43D0006EAF3 /* RSA.m */,
+				30EB724828FD5005007B1C70 /* Tool.h */,
+				30EB724928FD5005007B1C70 /* Tool.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -253,6 +264,7 @@
 		3073697628E0A1750006EAF3 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				30EB724028FD37C0007B1C70 /* swiftManager */,
 				3073697728E0A1750006EAF3 /* HttpManager.h */,
 				3073697828E0A1750006EAF3 /* HttpManager.m */,
 			);
@@ -262,8 +274,8 @@
 		3073697928E0A1750006EAF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3073697A28E0A1750006EAF3 /* BaseModel.m */,
 				3073697B28E0A1750006EAF3 /* BaseModel.h */,
+				3073697A28E0A1750006EAF3 /* BaseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +328,16 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		30EB724028FD37C0007B1C70 /* swiftManager */ = {
+			isa = PBXGroup;
+			children = (
+				30EB724128FD37EE007B1C70 /* MoyaConfig.swift */,
+				30EB724328FD37F4007B1C70 /* API.swift */,
+				30EB724528FD3E01007B1C70 /* NetworkManager.swift */,
+			);
+			path = swiftManager;
 			sourceTree = "<group>";
 		};
 		D3BBBD53ABA1BC8141FD689E /* Frameworks */ = {
@@ -441,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30EB724A28FD5005007B1C70 /* Tool.m in Sources */,
 				307672B228F6A996009980AF /* UIImage+Orientation.m in Sources */,
 				3076732028F7E45D009980AF /* HomeController.m in Sources */,
 				307672C728F6AB50009980AF /* BaseViewController.m in Sources */,
@@ -448,13 +471,16 @@
 				307672C828F6AB50009980AF /* HTMLViewController.m in Sources */,
 				307672CA28F6AB50009980AF /* BaseTabBarController.m in Sources */,
 				3076732328F7E678009980AF /* MainTabBarController.m in Sources */,
+				30EB724228FD37EF007B1C70 /* MoyaConfig.swift in Sources */,
 				3073696728E04C500006EAF3 /* Model.swift in Sources */,
 				3073694E28E04C230006EAF3 /* AppDelegate.m in Sources */,
 				307672AF28F6A984009980AF /* UIView+Frame.m in Sources */,
 				301C476128F7EB89007EB199 /* NextController.m in Sources */,
+				30EB724628FD3E01007B1C70 /* NetworkManager.swift in Sources */,
 				3076732628F7E7DB009980AF /* BaseNavigationViewController.m in Sources */,
 				3073697E28E0A1750006EAF3 /* BaseModel.m in Sources */,
 				3096532028F96B3000AA08BD /* AppDelegate+AvoidCrash.m in Sources */,
+				30EB724428FD37F5007B1C70 /* API.swift in Sources */,
 				3073697D28E0A1750006EAF3 /* HttpManager.m in Sources */,
 				307672C928F6AB50009980AF /* BaseTableViewController.m in Sources */,
 				307672BB28F6AB19009980AF /* UITextField+Category.m in Sources */,

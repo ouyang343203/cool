@@ -69,6 +69,7 @@
 
 //swift配置文件
 #import "Cool-Bridging-Header.h"
+#import "Cool-Swift.h"
 
 
 #endif /* GlobalHeader_h */

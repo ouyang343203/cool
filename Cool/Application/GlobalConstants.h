@@ -174,6 +174,7 @@
 #define StrongSelf __strong typeof(weakSelf) strongSelf = weakSelf;
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
+#define KToolMANAGER [Tool shareManager]
 #define KErrorMessage @"网络请求异常"
 #define SuppressPerformSelectorLeakWarning(Stuff)  do { \
   _Pragma("clang diagnostic push") \

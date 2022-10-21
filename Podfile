@@ -14,5 +14,7 @@ target 'Cool' do
   pod 'WebViewJavascriptBridge'
   pod 'Moya'
   pod 'LSSafeProtector'
+  pod 'HandyJSON', '~> 5.0.0'
+  pod 'SwiftyJSON', '~> 5.0.0'
 end
 
