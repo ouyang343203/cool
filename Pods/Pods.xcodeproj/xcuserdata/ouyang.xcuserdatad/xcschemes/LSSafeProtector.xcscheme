@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1743AC8C65A1A24682F32220C3432DE4"
-               BuildableName = "libLSSafeProtector.a"
+               BuildableName = "LSSafeProtector.framework"
                BlueprintName = "LSSafeProtector"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

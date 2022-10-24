@@ -15,5 +15,5 @@
 #import "GlobalConstants.h"
 #import "GlobalHeader.h"
 #import "ThirdPartConfig.h"
-
+#import "Cool-Swift.h"
 #endif /* PrefixHeader_pch */

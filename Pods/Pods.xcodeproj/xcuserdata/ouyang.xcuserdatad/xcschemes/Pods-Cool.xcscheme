@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6B638E5A1FD4BA918BC7C7D2642740B9"
-               BuildableName = "libPods-Cool.a"
+               BuildableName = "Pods_Cool.framework"
                BlueprintName = "Pods-Cool"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

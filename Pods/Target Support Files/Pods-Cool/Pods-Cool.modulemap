@@ -1,4 +1,4 @@
-module Pods_Cool {
+framework module Pods_Cool {
   umbrella header "Pods-Cool-umbrella.h"
 
   export *

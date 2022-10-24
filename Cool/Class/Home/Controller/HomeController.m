@@ -7,6 +7,7 @@
 
 #import "HomeController.h"
 #import "NextController.h"
+#import "Cool-Swift.h"
 
 @interface HomeController ()
 

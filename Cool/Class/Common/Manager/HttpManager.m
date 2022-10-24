@@ -6,7 +6,6 @@
 //  网络请求管理类
 
 #import "HttpManager.h"
-#import "BaseModel.h"
 #import "RSA.h"
 #import <AFNetworking/AFNetworking.h>
 
@@ -184,7 +183,7 @@ static const int kRequestTimeoutInterval = 60;
 
 #pragma mark - Private Method
 /* 处理HTTP RESPONSE */
-- (BaseModel *)processResponse:(id)response mapper:(id)mapper {
+- (BaseResponseModel *)processResponse:(id)response mapper:(id)mapper {
     if (!response) {
         Logger(@"服务器返回为空: %@", response);
         return nil;
@@ -212,7 +211,7 @@ static const int kRequestTimeoutInterval = 60;
         return nil;
     }
 
-    BaseModel *responseModel = [BaseModel mj_objectWithKeyValues:response];
+    BaseResponseModel *responseModel = [BaseResponseModel mj_objectWithKeyValues:response];
     if (responseModel.code == 200) {
         responseModel.data = [self mapperObjectWithResult:responseModel.data mapper:mapper];
         return responseModel;

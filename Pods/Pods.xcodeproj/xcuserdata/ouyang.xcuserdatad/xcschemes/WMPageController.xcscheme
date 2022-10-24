@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "08883C0649C4BF01A927DCFD71B79C92"
-               BuildableName = "libWMPageController.a"
+               BuildableName = "WMPageController.framework"
                BlueprintName = "WMPageController"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -42,7 +42,7 @@
     tableView.backgroundColor = kBackgroundColor;
     tableView.separatorColor = kSeparateLineColor;
     [self.view addSubview:tableView];
-    [tableView makeConstraints:^(MASConstraintMaker *make) {
+    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         if (@available(iOS 11.0, *)) {
             make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
             make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);

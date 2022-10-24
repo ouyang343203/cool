@@ -15,7 +15,6 @@
 		3073695F28E04C230006EAF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3073695E28E04C230006EAF3 /* main.m */; };
 		3073696728E04C500006EAF3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3073696628E04C500006EAF3 /* Model.swift */; };
 		3073697D28E0A1750006EAF3 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3073697828E0A1750006EAF3 /* HttpManager.m */; };
-		3073697E28E0A1750006EAF3 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3073697A28E0A1750006EAF3 /* BaseModel.m */; };
 		3073698128E0A43D0006EAF3 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3073698028E0A43D0006EAF3 /* RSA.m */; };
 		307672AF28F6A984009980AF /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 307672AD28F6A984009980AF /* UIView+Frame.m */; };
 		307672B228F6A996009980AF /* UIImage+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 307672B028F6A996009980AF /* UIImage+Orientation.m */; };
@@ -31,11 +30,16 @@
 		3076732328F7E678009980AF /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732128F7E678009980AF /* MainTabBarController.m */; };
 		3076732628F7E7DB009980AF /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732428F7E7DB009980AF /* BaseNavigationViewController.m */; };
 		3096532028F96B3000AA08BD /* AppDelegate+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */; };
+		30A06B132902795000B2C6AF /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B122902795000B2C6AF /* LoginModel.swift */; };
+		30A06B1A29028AE900B2C6AF /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1929028AE900B2C6AF /* MineController.swift */; };
+		30A06B1C29029C6700B2C6AF /* JsonParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1B29029C6700B2C6AF /* JsonParse.swift */; };
+		30A06B1E2902A3FD00B2C6AF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1D2902A3FD00B2C6AF /* BaseModel.swift */; };
+		30A06B212902A52D00B2C6AF /* BaseResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B202902A52D00B2C6AF /* BaseResponseModel.m */; };
 		30EB724228FD37EF007B1C70 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EB724128FD37EE007B1C70 /* MoyaConfig.swift */; };
 		30EB724428FD37F5007B1C70 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EB724328FD37F4007B1C70 /* API.swift */; };
 		30EB724628FD3E01007B1C70 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EB724528FD3E01007B1C70 /* NetworkManager.swift */; };
 		30EB724A28FD5005007B1C70 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EB724928FD5005007B1C70 /* Tool.m */; };
-		A51D421B6A13D61D0FBDAE4E /* libPods-Cool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E12138EF2E810ED02E457F1C /* libPods-Cool.a */; };
+		8606736A28F19E063766A5A6 /* Pods_Cool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44662319DD693D88DDB9269 /* Pods_Cool.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +63,6 @@
 		3073697028E04CE80006EAF3 /* GlobalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalHeader.h; sourceTree = "<group>"; };
 		3073697728E0A1750006EAF3 /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
 		3073697828E0A1750006EAF3 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
-		3073697A28E0A1750006EAF3 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
-		3073697B28E0A1750006EAF3 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		3073697F28E0A43D0006EAF3 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
 		3073698028E0A43D0006EAF3 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		307672AD28F6A984009980AF /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -91,6 +93,12 @@
 		3076732528F7E7DB009980AF /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
 		3096531E28F96B3000AA08BD /* AppDelegate+AvoidCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AvoidCrash.h"; sourceTree = "<group>"; };
 		3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AvoidCrash.m"; sourceTree = "<group>"; };
+		30A06B122902795000B2C6AF /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		30A06B1929028AE900B2C6AF /* MineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
+		30A06B1B29029C6700B2C6AF /* JsonParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParse.swift; sourceTree = "<group>"; };
+		30A06B1D2902A3FD00B2C6AF /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		30A06B1F2902A52D00B2C6AF /* BaseResponseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseResponseModel.h; sourceTree = "<group>"; };
+		30A06B202902A52D00B2C6AF /* BaseResponseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseResponseModel.m; sourceTree = "<group>"; };
 		30EB724128FD37EE007B1C70 /* MoyaConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
 		30EB724328FD37F4007B1C70 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		30EB724528FD3E01007B1C70 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -98,7 +106,7 @@
 		30EB724928FD5005007B1C70 /* Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		5E8E830D028CB67E5ADA131A /* Pods-Cool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool.debug.xcconfig"; path = "Target Support Files/Pods-Cool/Pods-Cool.debug.xcconfig"; sourceTree = "<group>"; };
 		6B2CB6948D1A8207F4A1B7DD /* Pods-Cool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool.release.xcconfig"; path = "Target Support Files/Pods-Cool/Pods-Cool.release.xcconfig"; sourceTree = "<group>"; };
-		E12138EF2E810ED02E457F1C /* libPods-Cool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44662319DD693D88DDB9269 /* Pods_Cool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51D421B6A13D61D0FBDAE4E /* libPods-Cool.a in Frameworks */,
+				8606736A28F19E063766A5A6 /* Pods_Cool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +177,7 @@
 		3073696828E04C850006EAF3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				30A06B1429028A9F00B2C6AF /* Mine */,
 				3076731928F7E33B009980AF /* Home */,
 			);
 			path = Class;
@@ -274,8 +283,10 @@
 		3073697928E0A1750006EAF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3073697B28E0A1750006EAF3 /* BaseModel.h */,
-				3073697A28E0A1750006EAF3 /* BaseModel.m */,
+				30A06B122902795000B2C6AF /* LoginModel.swift */,
+				30A06B1D2902A3FD00B2C6AF /* BaseModel.swift */,
+				30A06B1F2902A52D00B2C6AF /* BaseResponseModel.h */,
+				30A06B202902A52D00B2C6AF /* BaseResponseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,12 +341,53 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		30A06B1429028A9F00B2C6AF /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				30A06B1829028ACC00B2C6AF /* Service */,
+				30A06B1729028AC600B2C6AF /* View */,
+				30A06B1629028ABF00B2C6AF /* Model */,
+				30A06B1529028AB400B2C6AF /* Controller */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		30A06B1529028AB400B2C6AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30A06B1929028AE900B2C6AF /* MineController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		30A06B1629028ABF00B2C6AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30A06B1729028AC600B2C6AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30A06B1829028ACC00B2C6AF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		30EB724028FD37C0007B1C70 /* swiftManager */ = {
 			isa = PBXGroup;
 			children = (
 				30EB724128FD37EE007B1C70 /* MoyaConfig.swift */,
 				30EB724328FD37F4007B1C70 /* API.swift */,
 				30EB724528FD3E01007B1C70 /* NetworkManager.swift */,
+				30A06B1B29029C6700B2C6AF /* JsonParse.swift */,
 			);
 			path = swiftManager;
 			sourceTree = "<group>";
@@ -343,7 +395,7 @@
 		D3BBBD53ABA1BC8141FD689E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E12138EF2E810ED02E457F1C /* libPods-Cool.a */,
+				D44662319DD693D88DDB9269 /* Pods_Cool.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -359,7 +411,7 @@
 				3073694528E04C230006EAF3 /* Sources */,
 				3073694628E04C230006EAF3 /* Frameworks */,
 				3073694728E04C230006EAF3 /* Resources */,
-				618196626C92FBBE9794E5A6 /* [CP] Copy Pods Resources */,
+				DB4B82DCC77D4A003D3F1267 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -417,23 +469,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		618196626C92FBBE9794E5A6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cool/Pods-Cool-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cool/Pods-Cool-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cool/Pods-Cool-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7494E774232FD7742E68372B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,6 +491,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DB4B82DCC77D4A003D3F1267 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cool/Pods-Cool-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cool/Pods-Cool-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cool/Pods-Cool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -470,16 +522,20 @@
 				307672BE28F6AB22009980AF /* UIButton+delay.m in Sources */,
 				307672C828F6AB50009980AF /* HTMLViewController.m in Sources */,
 				307672CA28F6AB50009980AF /* BaseTabBarController.m in Sources */,
+				30A06B132902795000B2C6AF /* LoginModel.swift in Sources */,
 				3076732328F7E678009980AF /* MainTabBarController.m in Sources */,
 				30EB724228FD37EF007B1C70 /* MoyaConfig.swift in Sources */,
 				3073696728E04C500006EAF3 /* Model.swift in Sources */,
 				3073694E28E04C230006EAF3 /* AppDelegate.m in Sources */,
+				30A06B1A29028AE900B2C6AF /* MineController.swift in Sources */,
 				307672AF28F6A984009980AF /* UIView+Frame.m in Sources */,
 				301C476128F7EB89007EB199 /* NextController.m in Sources */,
+				30A06B1C29029C6700B2C6AF /* JsonParse.swift in Sources */,
 				30EB724628FD3E01007B1C70 /* NetworkManager.swift in Sources */,
+				30A06B1E2902A3FD00B2C6AF /* BaseModel.swift in Sources */,
 				3076732628F7E7DB009980AF /* BaseNavigationViewController.m in Sources */,
-				3073697E28E0A1750006EAF3 /* BaseModel.m in Sources */,
 				3096532028F96B3000AA08BD /* AppDelegate+AvoidCrash.m in Sources */,
+				30A06B212902A52D00B2C6AF /* BaseResponseModel.m in Sources */,
 				30EB724428FD37F5007B1C70 /* API.swift in Sources */,
 				3073697D28E0A1750006EAF3 /* HttpManager.m in Sources */,
 				307672C928F6AB50009980AF /* BaseTableViewController.m in Sources */,

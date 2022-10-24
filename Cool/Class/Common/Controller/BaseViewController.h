@@ -26,19 +26,17 @@
 
 
 // 页面排版规范
-#pragma mark - HTTP Method -- 网络请求
+// MARK:  mark - HTTP Method -- 网络请求
 
-// 方法和方法之间空一行
-#pragma mark - Delegate Method -- 代理方法
+//MARK: - Delegate Method -- 代理方法
 
+//MARK: - Private Method -- 私有方法
 
-#pragma mark - Private Method -- 私有方法
+//MARK: - Public Method -- 公开方法
 
+//MARK:  - Action Method -- 公开方法
 
-#pragma mark - Public Method -- 公开方法
-
-
-#pragma mark - Setter/Getter -- Getter尽量写出懒加载形式
+//MARK:  - Setter/Getter -- Getter尽量写出懒加载形式
 
 
 @end

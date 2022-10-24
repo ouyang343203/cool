@@ -47,6 +47,7 @@ PODS:
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
+  - ObjectMapper (4.2.0)
   - Result (4.1.0)
   - SDWebImage (5.13.3):
     - SDWebImage/Core (= 5.13.3)
@@ -71,6 +72,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - Moya
+  - ObjectMapper
   - SnapKit
   - SwiftyJSON (~> 5.0.0)
   - WebViewJavascriptBridge
@@ -93,6 +95,7 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - Moya
+    - ObjectMapper
     - Result
     - SDWebImage
     - SnapKit
@@ -116,6 +119,7 @@ SPEC CHECKSUMS:
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SDWebImage: af5bbffef2cde09f148d826f9733dcde1a9414cd
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
@@ -125,6 +129,6 @@ SPEC CHECKSUMS:
   WMZBanner: 42d02896dc7a67a4d7a2ebe1ef5b7a79f8d2c540
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
 
-PODFILE CHECKSUM: 9b227651067108cf2318174d7290af75f8f6cd7e
+PODFILE CHECKSUM: 7acb99a2f37baf674f0b91106571856b549576d8
 
 COCOAPODS: 1.11.3

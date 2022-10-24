@@ -52,7 +52,7 @@
 
 
 // Model层
-#import "BaseModel.h"
+#import "BaseResponseModel.h"
 
 
 // 业务层

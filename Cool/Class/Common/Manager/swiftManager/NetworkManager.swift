@@ -10,18 +10,27 @@ import Foundation
 import HandyJSON
 import Moya
 import Alamofire
-//import SwiftyJSON
+import ObjectMapper
+import SwiftyJSON
+
 /// 超时时长
 private var requestTimeOut:Double = 30
 ///成功数据的回调
-typealias successCallback = ((String) -> (Void))
+typealias successCallback = ((BaseModel) -> (Void))
 ///失败的回调
 typealias failedCallback = ((String) -> (Void))
+
+// 成功回调
+typealias RequestSuccessCallback = ((_ model: BaseModel?) -> Void)
+// 失败回调
+typealias RequestFailureCallback = ((_ code: Int?, _ message: String?) -> Void)
+
+
 ///网络错误的回调
 typealias errorCallback = (() -> (Void))
 
 
-///网络请求的基本设置,定义请求头相关信息
+// MARK:  mark - 网络请求的基本设置,定义请求头相关信息
 private let myEndpointClosure = { (target: API) -> Endpoint in
     ///这里把endpoint重新构造一遍主要为了解决网络请求地址里面含有? 时无法解析的bug https://github.com/Moya/Moya/issues/1198
     let url = target.baseURL.absoluteString + target.path
@@ -43,7 +52,7 @@ private let myEndpointClosure = { (target: API) -> Endpoint in
     return endpoint
 }
 
-///网络请求的设置用于定义当 Endpoint 有问题时，提前拦截请求
+// MARK:  mark - 网络请求的设置用于定义当 Endpoint 有问题时，提前拦截请求
 private let requestClosure = { (endpoint: Endpoint, done: MoyaProvider.RequestResultClosure) in
     do {
         var request = try endpoint.urlRequest()
@@ -78,17 +87,16 @@ private let RequestAlertPlugin = NetworkActivityPlugin.init { changeType, _ in
     switch changeType {
     case .began:
         print("开始请求网络")
+        JYToastUtils.showLoading()
         
     case .ended:
         print("结束")
-//        SVProgressHUD .dismiss()
+        JYToastUtils.dismiss()
     }
 }
 
-
-
 let networkPlugin = RequestAlertPlugin
-////网络请求发送的核心初始化方法，创建网络请求对象
+// MARK:  mark - 网络请求发送的核心初始化方法，创建网络请求对象
 let Provider = MoyaProvider<API>(endpointClosure: myEndpointClosure, requestClosure: requestClosure, plugins: [networkPlugin], trackInflights: false)
 
 /// - Parameters:
@@ -97,7 +105,7 @@ let Provider = MoyaProvider<API>(endpointClosure: myEndpointClosure, requestClos
 ///   - failed: 失败
 ///   - error: 错误
 
-func networkRequest<T>(target: API, mapper: T.Type, successClosure: @escaping (BaseModel) -> Void, failClosure: failedCallback?) where T : HandyJSON{
+func NetworkRequest<T>(target: API, mapper: T.Type, successClosure: @escaping (BaseModel) -> Void, failClosure: failedCallback?) where T : HandyJSON{
     //先判断网络是否有链接 没有的话直接返回--代码略
     if !isNetworkConnect{
        JYToastUtils.showShort(withStatus: "网络链接失败")
@@ -126,9 +134,9 @@ func networkRequest<T>(target: API, mapper: T.Type, successClosure: @escaping (B
                                 dataArray = NSMutableArray.init()
                                 for tempObject in mapperObject as! Array<Dictionary<String, Any>> {
 
-//                                  let tempmodel = JsonParse.jsonToModel(tempObject, mapper.self)
-//                                    dataArray?.add(tempmodel)
-//                                    mapperObject = dataArray
+                                  let tempmodel = JsonParse.jsonToModel(tempObject, mapper.self)
+                                    dataArray?.add(tempmodel)
+                                    mapperObject = dataArray
                                 }
                                 
                             }
@@ -154,6 +162,56 @@ func networkRequest<T>(target: API, mapper: T.Type, successClosure: @escaping (B
             if failClosure != nil {
                 failClosure!("")
             }
+        }
+    }
+}
+
+func NetWorkRequest<T:HandyJSON>(_ target: API, isHideFailAlert: Bool = false, modelType: T.Type?, successCallback: RequestSuccessCallback?, failureCallback: RequestFailureCallback? = nil) -> Cancellable? {
+    // 这里显示loading图
+    return Provider.request(target) { result in
+        // 隐藏hud
+        switch result {
+        case let .success(response):
+            do {
+                
+//                guard let jsonObj = try? (response.mapJSON() as! Dictionary<String, Any>) else {
+//                        JYToastUtils.showShort(withStatus: "数据解析失败")
+//                          return
+//                      }
+//
+//                let jsonData = jsonObj["data"]
+////                let jsonData = try JSON(data: response.data)
+//                let tempmodel = JsonParse.jsonToModel(jsonData as! Dictionary<String, Any>, modelType.self!)
+//                successCallback?(tempmodel)
+//                let jsonData = try JSON(data: response.data)
+//                if jsonData["data"].dictionaryObject != nil { // 字典转model
+//                    if let model = T(JSONString: jsonData["data"].rawString() ?? "") {
+//                        successCallback?(model as? BaseModel)
+//                    } else {
+//                        failureCallback?(jsonData["data"].intValue, "解析失败")
+//                    }
+//                }
+                
+                guard let jsonObj = JSONDeserializer<T>.deserializeModelArrayFrom(json: response.data.description) else {
+                      JYToastUtils.showShort(withStatus: "数据解析失败")
+                     return
+                 }
+                
+                successCallback?(jsonObj as? BaseModel)
+                
+            } catch {
+                JYToastUtils.showShort(withStatus: "数据解析失败")
+            }
+        case let .failure(error):
+            
+            guard let error = error as? MoyaError else {
+                //网络连接失败，提示用户
+               JYToastUtils.showShort(withStatus: "网络链接失败")
+                break
+            }
+            // 网络连接失败，提示用户
+            print("网络连接失败\(error)")
+            failureCallback?(nil, "网络连接失败")
         }
     }
 }
@@ -198,7 +256,7 @@ func networkRequest<T>(target: API, mapper: T.Type, successClosure: @escaping (B
 //            }
 //      }
 //}
-
+//
 
 /// 基于Alamofire,网络是否连接，，这个方法不建议放到这个类中,可以放在全局的工具类中判断网络链接情况
 /// 用get方法是因为这样才会在获取isNetworkConnect时实时判断网络链接请求，如有更好的方法可以fork

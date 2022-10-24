@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger, RequestMethod) {
 - (void)deleteWithUrl:(NSString *)url params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(id response))success failure:(void (^)(NSError *error))failure;
 
 /* 接受body */
-- (void)requestWithUrl:(NSString *)url method:(RequestMethod)method bodyParams:(NSDictionary *)bodyParams mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseModel *response))success failure:(void (^)(NSError *error))failure;
+- (void)requestWithUrl:(NSString *)url method:(RequestMethod)method bodyParams:(NSDictionary *)bodyParams mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseResponseModel *response))success failure:(void (^)(NSError *error))failure;
 
 
 @end

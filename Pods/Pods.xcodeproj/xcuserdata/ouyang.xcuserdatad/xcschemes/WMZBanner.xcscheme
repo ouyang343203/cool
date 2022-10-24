@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DFFC0AA0E85C2F9D87362E25D8FA85BC"
-               BuildableName = "libWMZBanner.a"
+               BuildableName = "WMZBanner.framework"
                BlueprintName = "WMZBanner"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

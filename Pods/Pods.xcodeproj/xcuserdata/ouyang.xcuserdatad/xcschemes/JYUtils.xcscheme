@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3F1D2FFFA66E14A4BD264D5A24D5EFE"
-               BuildableName = "libJYUtils.a"
+               BuildableName = "JYUtils.framework"
                BlueprintName = "JYUtils"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

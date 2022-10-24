@@ -1,5 +1,8 @@
 platform :ios, '9.0'
 target 'Cool' do
+  
+    use_frameworks!
+  
   pod 'AFNetworking','4.0.1'
   pod 'FDFullscreenPopGesture'
   pod 'JYUtils'  ,'~>0.3.3'           #UI库
@@ -16,5 +19,7 @@ target 'Cool' do
   pod 'LSSafeProtector'
   pod 'HandyJSON', '~> 5.0.0'
   pod 'SwiftyJSON', '~> 5.0.0'
+  pod 'ObjectMapper'
+  
 end
 

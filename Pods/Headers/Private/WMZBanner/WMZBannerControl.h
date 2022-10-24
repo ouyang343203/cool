@@ -1,1 +1,0 @@
-../../../WMZBanner/WMZBanner/WMZBanner/WMZBannerControl.h
