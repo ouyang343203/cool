@@ -85,27 +85,27 @@ static const int kRequestTimeoutInterval = 60;
 #pragma mark - HTTP请求方法
 
 /** GET请求 */
-- (void)getWithUrl:(NSString *)url params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(id response))success failure:(void (^)(NSError *error))failure {
+- (void)getWithUrl:(NSString *)url params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseResponseModel *response))success failure:(void (^)(NSError *error))failure {
     [self requestWithUrl:url method:RequestMethodGet params:params mapper:mapper showHUD:showHUD success:success failure:failure];
 }
 
 /** POST请求 */
-- (void)postWithUrl:(NSString *)url params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(id response))success failure:(void (^)(NSError *error))failure {
+- (void)postWithUrl:(NSString *)url params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseResponseModel *response))success failure:(void (^)(NSError *error))failure {
     [self requestWithUrl:url method:RequestMethodPost params:params mapper:mapper showHUD:showHUD success:success failure:failure];
 }
 
 /** PUT请求 */
-- (void)putWithUrl:(NSString *)url params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(id response))success failure:(void (^)(NSError *error))failure {
+- (void)putWithUrl:(NSString *)url params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseResponseModel *response))success failure:(void (^)(NSError *error))failure {
     [self requestWithUrl:url method:RequestMethodPut params:params mapper:mapper showHUD:showHUD success:success failure:failure];
 }
 
 /** DELETE请求 */
-- (void)deleteWithUrl:(NSString *)url params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(id response))success failure:(void (^)(NSError *error))failure {
+- (void)deleteWithUrl:(NSString *)url params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseResponseModel *response))success failure:(void (^)(NSError *error))failure {
     [self requestWithUrl:url method:RequestMethodDelete params:params mapper:mapper showHUD:showHUD success:success failure:failure];
 }
 
 /* 接受params */
-- (void)requestWithUrl:(NSString *)url method:(RequestMethod)method params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseModel *responseModel))success failure:(void (^)(NSError *error))failure {
+- (void)requestWithUrl:(NSString *)url method:(RequestMethod)method params:(NSDictionary *)params mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseResponseModel *responseModel))success failure:(void (^)(NSError *error))failure {
     [self showHUD:showHUD];
     NSString *requestMethod = [self stringRequestMethod:method];
     NSError *serializationError = nil;
@@ -131,7 +131,7 @@ static const int kRequestTimeoutInterval = 60;
             if (success) {
                 [self dismissHUD:showHUD];
                 Logger(@"\n[** %@请求 **] \nREQUEST URL: %@ \nREQUEST PARAMS: %@ \nRESPONSE: %@ \n\n", requestMethod, url, [params mj_JSONString], [self responseToString:responseObject]);
-                BaseModel *responseModel = [self processResponse:responseObject mapper:mapper];
+                BaseResponseModel *responseModel = [self processResponse:responseObject mapper:mapper];
                 if (responseModel) {
                     success(responseModel);
                 }
@@ -142,7 +142,7 @@ static const int kRequestTimeoutInterval = 60;
 }
 
 /* 接受body */
-- (void)requestWithUrl:(NSString *)url method:(RequestMethod)method bodyParams:(NSDictionary *)bodyParams mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseModel *response))success failure:(void (^)(NSError *error))failure {
+- (void)requestWithUrl:(NSString *)url method:(RequestMethod)method bodyParams:(NSDictionary *)bodyParams mapper:(id)mapper showHUD:(BOOL)showHUD success:(void (^)(BaseResponseModel *response))success failure:(void (^)(NSError *error))failure {
     [self showHUD:showHUD];
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@", SERVER_URL, [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet   characterSetWithCharactersInString:@"!$&'()*+-./:;=?@_~%#[]"]]];
     NSString *requestMethod = [self stringRequestMethod:method];
@@ -171,7 +171,7 @@ static const int kRequestTimeoutInterval = 60;
                 [self dismissHUD:showHUD];
                 Logger(@"\n[** %@请求 **] \nREQUEST URL: %@ \nREQUEST PARAMS: %@ \nRESPONSE: %@ \n\n", requestMethod, requestUrl, [bodyParams mj_JSONString], [self responseToString:responseObject]);
                 
-                BaseModel *responseModel = [self processResponse:responseObject mapper:mapper];
+                BaseResponseModel *responseModel = [self processResponse:responseObject mapper:mapper];
                 if (responseModel) {
                     success(responseModel);
                 }

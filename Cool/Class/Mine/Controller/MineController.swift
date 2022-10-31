@@ -8,10 +8,12 @@
 import UIKit
 
 class MineController: UIViewController {
-
+    private var belowList: [GoodsModel]? //底部列表数据
+    private var list: [shangpingModel]? //底部列表数据
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.loadBelowListData()
+      //  self.loadListData()
         // Do any additional setup after loading the view.
     }
     
@@ -29,15 +31,23 @@ class MineController: UIViewController {
 }
 
 extension MineController {
-    
+
+    // MARK:  mark - HTTP Method -- 网络请求
     private func loadBelowListData() -> Void{
-        NetworkRequest(target: .login(parameters: ["age":"12"]), mapper:UserInfoModel.self) { responsedata in
-            
-        } failClosure: { responsedata in
-            
+        NetworkRequest(target: API.login(parameters: ["page":0]), modelType: GoodsModel.self) { model in
+            self.belowList = (model as! [GoodsModel])
+        } failureCallback: { code, message in
+            JYToastUtils.showShort(withStatus: message)
         }
     }
-    // MARK:  mark - HTTP Method -- 网络请求
+
+//    private func loadListData() -> Void{
+//        NetworkRequest(target: API.login(parameters: ["page":0]), modelType: shangpingModel.self,isHideFailAlert:true) { model in
+//            self.list = (model as! [shangpingModel])
+//        } failureCallback: { code, message in
+//            JYToastUtils.showShort(withStatus: message)
+//        }
+//    }
 
     // 方法和方法之间空一行
     // MARK: mark - Delegate Method -- 代理方法

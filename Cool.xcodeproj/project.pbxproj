@@ -30,7 +30,7 @@
 		3076732328F7E678009980AF /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732128F7E678009980AF /* MainTabBarController.m */; };
 		3076732628F7E7DB009980AF /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732428F7E7DB009980AF /* BaseNavigationViewController.m */; };
 		3096532028F96B3000AA08BD /* AppDelegate+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */; };
-		30A06B132902795000B2C6AF /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B122902795000B2C6AF /* LoginModel.swift */; };
+		309FE25C290BD9B70071CBDB /* BuranrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FE25B290BD9B70071CBDB /* BuranrModel.swift */; };
 		30A06B1A29028AE900B2C6AF /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1929028AE900B2C6AF /* MineController.swift */; };
 		30A06B1C29029C6700B2C6AF /* JsonParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1B29029C6700B2C6AF /* JsonParse.swift */; };
 		30A06B1E2902A3FD00B2C6AF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1D2902A3FD00B2C6AF /* BaseModel.swift */; };
@@ -93,7 +93,7 @@
 		3076732528F7E7DB009980AF /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
 		3096531E28F96B3000AA08BD /* AppDelegate+AvoidCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AvoidCrash.h"; sourceTree = "<group>"; };
 		3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AvoidCrash.m"; sourceTree = "<group>"; };
-		30A06B122902795000B2C6AF /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		309FE25B290BD9B70071CBDB /* BuranrModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuranrModel.swift; sourceTree = "<group>"; };
 		30A06B1929028AE900B2C6AF /* MineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
 		30A06B1B29029C6700B2C6AF /* JsonParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParse.swift; sourceTree = "<group>"; };
 		30A06B1D2902A3FD00B2C6AF /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -283,7 +283,6 @@
 		3073697928E0A1750006EAF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				30A06B122902795000B2C6AF /* LoginModel.swift */,
 				30A06B1D2902A3FD00B2C6AF /* BaseModel.swift */,
 				30A06B1F2902A52D00B2C6AF /* BaseResponseModel.h */,
 				30A06B202902A52D00B2C6AF /* BaseResponseModel.m */,
@@ -363,6 +362,7 @@
 		30A06B1629028ABF00B2C6AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				309FE25B290BD9B70071CBDB /* BuranrModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -522,12 +522,12 @@
 				307672BE28F6AB22009980AF /* UIButton+delay.m in Sources */,
 				307672C828F6AB50009980AF /* HTMLViewController.m in Sources */,
 				307672CA28F6AB50009980AF /* BaseTabBarController.m in Sources */,
-				30A06B132902795000B2C6AF /* LoginModel.swift in Sources */,
 				3076732328F7E678009980AF /* MainTabBarController.m in Sources */,
 				30EB724228FD37EF007B1C70 /* MoyaConfig.swift in Sources */,
 				3073696728E04C500006EAF3 /* Model.swift in Sources */,
 				3073694E28E04C230006EAF3 /* AppDelegate.m in Sources */,
 				30A06B1A29028AE900B2C6AF /* MineController.swift in Sources */,
+				309FE25C290BD9B70071CBDB /* BuranrModel.swift in Sources */,
 				307672AF28F6A984009980AF /* UIView+Frame.m in Sources */,
 				301C476128F7EB89007EB199 /* NextController.m in Sources */,
 				30A06B1C29029C6700B2C6AF /* JsonParse.swift in Sources */,

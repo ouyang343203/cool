@@ -21,7 +21,7 @@ extension API: TargetType{
 
         switch self {
         default:
-            return URL(string: Moya_baseURL2)!
+            return URL(string: Moya_baseURL)!
         }
       }
       
@@ -41,7 +41,7 @@ extension API: TargetType{
         var retMethod = Method.get
         switch self {
         case .login:
-            retMethod = .get
+            retMethod = .post
             break
         case .register:
             retMethod = .post

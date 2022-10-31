@@ -6,13 +6,21 @@
 //
 
 import UIKit
+import ObjectMapper
 import HandyJSON
 
-class BaseModel: NSObject,HandyJSON {
-    var code:Int = 0
-    var data: AnyObject?
-    var msg: String?
-    required override init() {
+class BaseModel<T:Any>:HandyJSON,Mappable {
+    required init?(map: ObjectMapper.Map) {
+        
     }
+    
+    func mapping(map: ObjectMapper.Map) {
+        
+    }
+    
+    var data : T? // 主要数据
+    var code:Int = 0
+    var msg: String?
+    required public init() {}
 }
 

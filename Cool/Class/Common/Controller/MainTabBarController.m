@@ -26,7 +26,10 @@
     
     self.delegate = self;     //设置代理
     HomeController *homeVC = [[HomeController alloc] init];
+    MineController *mainVC = [[MineController alloc] init];
+
     [self addChildViewController:homeVC title:NSLocalizedString(@"首页", nil) image:@"bq_sy1" selectedImage:@"bq_sy2"];
+    [self addChildViewController:mainVC title:NSLocalizedString(@"我的", nil) image:@"bq_sy1" selectedImage:@"bq_sy2"];
 }
 
 - (void)addChildViewController:(UIViewController *)childVC title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
