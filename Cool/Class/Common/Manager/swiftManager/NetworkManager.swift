@@ -118,7 +118,6 @@ func NetworkRequest<T:Mappable>(target: API, modelType: T.Type, successCallback:
                 let jsonData = try JSON(data: response.data)
                 print("返回数据:",jsonData)
                 let model = T(JSONString: jsonData["data"].rawString() ?? "")
-                print("返回数据:",model as Any)
                 if jsonData["data"].dictionaryObject == nil, jsonData["data"].arrayObject == nil { // 返回字符串
                     JYToastUtils.showShort(withStatus: jsonData["data"].string)
                     return
@@ -148,36 +147,6 @@ func NetworkRequest<T:Mappable>(target: API, modelType: T.Type, successCallback:
         }
     }
 }
-
-
-//func NetworkRequest<T:Mappable>(target: API, modelType: T.Type, isHideFailAlert: Bool = false, successCallback:RequestSuccessCallback?, failureCallback: RequestFailureCallback?){
-//    //先判断网络是否有链接 没有的话直接返回--代码略
-//    if !isNetworkConnect{
-//       JYToastUtils.showShort(withStatus: "网络链接失败")
-//        return
-//    }
-//    //这里显示loading图
-//    Provider.request(target) { (result) in
-//        //隐藏hud
-//        switch result {
-//        case let .success(response):
-//            do {
-//                let jsonData = try JSON(data: response.data)
-//                guard let jsonObject = try? jsonData["data"].dictionaryObject == nil else {
-//                     JYToastUtils.showShort(withStatus: "数据解析失败")
-//                     return
-//                }
-//
-//            } catch {
-//                JYToastUtils.showShort(withStatus: "数据解析失败")
-//            }
-//            
-//        case .failure(_):
-//            JYToastUtils.showShort(withStatus: "请求失败")
-//            failureCallback?(nil, "网络连接失败")
-//        }
-//    }
-//}
 /// 基于Alamofire,网络是否连接，，这个方法不建议放到这个类中,可以放在全局的工具类中判断网络链接情况
 /// 用get方法是因为这样才会在获取isNetworkConnect时实时判断网络链接请求，如有更好的方法可以fork
 var isNetworkConnect: Bool {

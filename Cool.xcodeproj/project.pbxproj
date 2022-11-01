@@ -32,7 +32,6 @@
 		3096532028F96B3000AA08BD /* AppDelegate+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */; };
 		309FE25C290BD9B70071CBDB /* BuranrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FE25B290BD9B70071CBDB /* BuranrModel.swift */; };
 		30A06B1A29028AE900B2C6AF /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1929028AE900B2C6AF /* MineController.swift */; };
-		30A06B1C29029C6700B2C6AF /* JsonParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1B29029C6700B2C6AF /* JsonParse.swift */; };
 		30A06B1E2902A3FD00B2C6AF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1D2902A3FD00B2C6AF /* BaseModel.swift */; };
 		30A06B212902A52D00B2C6AF /* BaseResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B202902A52D00B2C6AF /* BaseResponseModel.m */; };
 		30EB724228FD37EF007B1C70 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EB724128FD37EE007B1C70 /* MoyaConfig.swift */; };
@@ -95,7 +94,6 @@
 		3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AvoidCrash.m"; sourceTree = "<group>"; };
 		309FE25B290BD9B70071CBDB /* BuranrModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuranrModel.swift; sourceTree = "<group>"; };
 		30A06B1929028AE900B2C6AF /* MineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
-		30A06B1B29029C6700B2C6AF /* JsonParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParse.swift; sourceTree = "<group>"; };
 		30A06B1D2902A3FD00B2C6AF /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		30A06B1F2902A52D00B2C6AF /* BaseResponseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseResponseModel.h; sourceTree = "<group>"; };
 		30A06B202902A52D00B2C6AF /* BaseResponseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseResponseModel.m; sourceTree = "<group>"; };
@@ -387,7 +385,6 @@
 				30EB724128FD37EE007B1C70 /* MoyaConfig.swift */,
 				30EB724328FD37F4007B1C70 /* API.swift */,
 				30EB724528FD3E01007B1C70 /* NetworkManager.swift */,
-				30A06B1B29029C6700B2C6AF /* JsonParse.swift */,
 			);
 			path = swiftManager;
 			sourceTree = "<group>";
@@ -530,7 +527,6 @@
 				309FE25C290BD9B70071CBDB /* BuranrModel.swift in Sources */,
 				307672AF28F6A984009980AF /* UIView+Frame.m in Sources */,
 				301C476128F7EB89007EB199 /* NextController.m in Sources */,
-				30A06B1C29029C6700B2C6AF /* JsonParse.swift in Sources */,
 				30EB724628FD3E01007B1C70 /* NetworkManager.swift in Sources */,
 				30A06B1E2902A3FD00B2C6AF /* BaseModel.swift in Sources */,
 				3076732628F7E7DB009980AF /* BaseNavigationViewController.m in Sources */,
