@@ -13,6 +13,7 @@ enum API{
     case login(parameters:[String:Any])
     case register(parameters:[String:Any])
     case balencelist(parameters:[String:Any])
+    case uploadHeadImage(parameters: [String:Any], imageDate:Data)
 }
 
 extension API: TargetType{
@@ -29,11 +30,13 @@ extension API: TargetType{
         
         switch self {
         case .login:
-          return login_API
+            return login_API
         case .register:
-          return "/index.php?m=Api&c=User&a=user_cash_out"
+            return "/index.php?m=Api&c=User&a=user_cash_out"
         case .balencelist:
-             return balence_API // 收益明细
+            return balence_API // 收益明细
+        case .uploadHeadImage(parameters: _, imageDate: _):
+            return "/file/user/upload.jhtml"
       }
     }
     
@@ -57,14 +60,23 @@ extension API: TargetType{
         return "".data(using: .utf8)!
     }
     
+    //请求的参数在这里处理
     public var task: Task{
         switch self {
         case let .login(parameters):
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+            
         case let .register(parameters):
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+            
         case let .balencelist(parameters):
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+            
+        case .uploadHeadImage(parameters: let parameters, imageDate: let imgDate):
+            let formData = MultipartFormData(provider: .data(imgDate), name: "file",
+                                             fileName: "hangge.png", mimeType: "image/png")
+            return .uploadCompositeMultipart([formData], urlParameters: parameters)
+
         }
     }
     

@@ -117,7 +117,6 @@ func NetworkRequest<T:Mappable>(target: API, modelType: T.Type, successCallback:
             do {
                 let jsonData = try JSON(data: response.data)
                 print("返回数据:",jsonData)
-                let model = T(JSONString: jsonData["data"].rawString() ?? "")
                 if jsonData["data"].dictionaryObject == nil, jsonData["data"].arrayObject == nil { // 返回字符串
                     JYToastUtils.showShort(withStatus: jsonData["data"].string)
                     return
