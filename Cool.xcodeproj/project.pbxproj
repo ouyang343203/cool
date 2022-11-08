@@ -29,6 +29,7 @@
 		3076732028F7E45D009980AF /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076731F28F7E45D009980AF /* HomeController.m */; };
 		3076732328F7E678009980AF /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732128F7E678009980AF /* MainTabBarController.m */; };
 		3076732628F7E7DB009980AF /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076732428F7E7DB009980AF /* BaseNavigationViewController.m */; };
+		3087EF5C29190CAE006D2A62 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087EF5B29190CAE006D2A62 /* LoginController.swift */; };
 		3096532028F96B3000AA08BD /* AppDelegate+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */; };
 		309FE25C290BD9B70071CBDB /* BuranrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FE25B290BD9B70071CBDB /* BuranrModel.swift */; };
 		30A06B1A29028AE900B2C6AF /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A06B1929028AE900B2C6AF /* MineController.swift */; };
@@ -90,6 +91,7 @@
 		3076732228F7E678009980AF /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		3076732428F7E7DB009980AF /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		3076732528F7E7DB009980AF /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
+		3087EF5B29190CAE006D2A62 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		3096531E28F96B3000AA08BD /* AppDelegate+AvoidCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AvoidCrash.h"; sourceTree = "<group>"; };
 		3096531F28F96B3000AA08BD /* AppDelegate+AvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AvoidCrash.m"; sourceTree = "<group>"; };
 		309FE25B290BD9B70071CBDB /* BuranrModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuranrModel.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		3073696828E04C850006EAF3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				3087EF5729190C3D006D2A62 /* Login */,
 				30A06B1429028A9F00B2C6AF /* Mine */,
 				3076731928F7E33B009980AF /* Home */,
 			);
@@ -336,6 +339,38 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3087EF5729190C3D006D2A62 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3087EF5A29190C71006D2A62 /* Controller */,
+				3087EF5929190C6A006D2A62 /* Model */,
+				3087EF5829190C5E006D2A62 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3087EF5829190C5E006D2A62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3087EF5929190C6A006D2A62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3087EF5A29190C71006D2A62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3087EF5B29190CAE006D2A62 /* LoginController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		30A06B1429028A9F00B2C6AF /* Mine */ = {
@@ -524,6 +559,7 @@
 				3073696728E04C500006EAF3 /* Model.swift in Sources */,
 				3073694E28E04C230006EAF3 /* AppDelegate.m in Sources */,
 				30A06B1A29028AE900B2C6AF /* MineController.swift in Sources */,
+				3087EF5C29190CAE006D2A62 /* LoginController.swift in Sources */,
 				309FE25C290BD9B70071CBDB /* BuranrModel.swift in Sources */,
 				307672AF28F6A984009980AF /* UIView+Frame.m in Sources */,
 				301C476128F7EB89007EB199 /* NextController.m in Sources */,

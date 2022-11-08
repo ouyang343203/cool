@@ -20,8 +20,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self avoidCrash];
-    MainTabBarController *tabBarVC = [[MainTabBarController alloc] init];
-    self.window.rootViewController = tabBarVC;
+    
+    LoginController *loginVC = [[LoginController alloc] init];
+//    MainTabBarController *tabBarVC = [[MainTabBarController alloc] init];
+//    self.window.rootViewController = tabBarVC;
+    self.window.rootViewController = loginVC;
     return YES;
 }
 
